@@ -1,0 +1,1756 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormPemohonActivity">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp">
+
+            <LinearLayout
+                android:id="@+id/linear_identitas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="20sp"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@android:color/black"
+                    android:text="@string/identitas"
+                    android:textAllCaps="true"
+                    android:layout_marginBottom="30dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:text="@string/nama_pemohon"/>
+
+                <EditText
+                    android:id="@+id/edt_nama_pemohon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/round_textview"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/alamat_pemohon"
+                    android:textSize="14sp"/>
+
+                <EditText
+                    android:id="@+id/edt_alamat_pemohon"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:padding="8dp"
+                    android:background="@drawable/round_textview"
+                    android:layout_marginTop="2dp"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:layout_marginTop="25dp"
+                    android:text="@string/nama_sarana"/>
+
+                <EditText
+                    android:id="@+id/edt_nama_sarana"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@drawable/round_textview"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:paddingTop="10dp"
+                    android:text="@string/alamat_sarana"/>
+
+                <EditText
+                    android:id="@+id/edt_alamat_sarana"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:padding="8dp"
+                    android:background="@drawable/round_textview"
+                    android:layout_marginTop="2dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_instrumen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/linear_sdmp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorAccent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sdm_p"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/check_tkl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/tkl" />
+                    <CheckBox
+                        android:id="@+id/check_tnk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/tnk" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/holo_red_light"
+                        android:text="*  Beri ceklist pada SDM Pendukung yang tersedia di tempat praktik anda"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_br"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorAccent"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bangunan"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/check_bangunan_rumah"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/rumah" />
+
+                    <CheckBox
+                        android:id="@+id/check_bangunan_non_rumah"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bukan_rumah" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/holo_red_light"
+                        android:text="* Beri ceklis pada jenis bangunan praktik ada"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linear_rf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorAccent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/ruangan_fasilitas"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/check_fasilitas_tunggu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/r_tunggu" />
+
+                    <CheckBox
+                        android:id="@+id/check_fasilitas_periksa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/r_periksa" />
+
+                    <CheckBox
+                        android:id="@+id/check_fasilitas_bersalin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/r_bersalin" />
+
+                    <CheckBox
+                        android:id="@+id/check_fasilitas_nifas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/r_nifas" />
+
+                    <CheckBox
+                        android:id="@+id/check_fasilitas_wc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/r_kamar_mandi" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linear_p"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorAccent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/prasarana"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/check_prasarana_air"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/air_bersih" />
+
+                    <CheckBox
+                        android:id="@+id/check_prasarana_listrik"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/kelistrikan" />
+
+                    <CheckBox
+                        android:id="@+id/check_prasarana_udara"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/sirkulasi_udara" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/holo_red_light"
+                        android:text="* Beri ceklist pada sarana prasarna yang tersedia di tempat praktik anda"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_m"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorAccent"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/meubelair"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/check_mebel_kursi_kerja"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/kursi_kerja" />
+                    <CheckBox
+                        android:id="@+id/check_mebel_lemari_arsip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/lemari_arsip" />
+                    <CheckBox
+                        android:id="@+id/check_mebel_meja_tulis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/meja_tulis" />
+                    <CheckBox
+                        android:id="@+id/check_mebel_tempat_tidur_periksa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/tempat_tidur_periksa" />
+                    <CheckBox
+                        android:id="@+id/check_mebel_tempat_tidur_bersalin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/tempat_tidur_bersalin" />
+                    <CheckBox
+                        android:id="@+id/check_mebel_tempat_tidur_nifa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/tempat_tidur_nifas" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_pkikb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorAccent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/kesehatan_ibu_kb"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/check_buku_kia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/buku_kia" />
+
+                    <CheckBox
+                        android:id="@+id/check_buku_kohort_ibu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/buku_kohort_ibu" />
+
+                    <CheckBox
+                        android:id="@+id/check_kartu_ibu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/kartu_ibu" />
+
+                    <CheckBox
+                        android:id="@+id/check_buku_register_ibu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/buku_register_ibu" />
+
+                    <CheckBox
+                        android:id="@+id/check_pencatatan_asuhan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/pencatatan_asuhan" />
+
+                    <CheckBox
+                        android:id="@+id/check_formulir_informed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/formulir_informed" />
+
+                    <CheckBox
+                        android:id="@+id/check_formulir_laporan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/formulir_laporan" />
+
+                    <CheckBox
+                        android:id="@+id/check_formulir_rujukan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/formulir_rujukan" />
+
+                    <CheckBox
+                        android:id="@+id/check_surat_keterangan_hamil"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/surat_keterangan_hamil" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linear_pka"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorAccent"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/kesehatan_anak"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/check_bagan_dinding_mtbs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bagan_dinding_mtbs" />
+
+                    <CheckBox
+                        android:id="@+id/check_bagan_mtbs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bagan_mtbs" />
+
+                    <CheckBox
+                        android:id="@+id/check_buku_register_bayi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/buku_register_bayi" />
+
+                    <CheckBox
+                        android:id="@+id/check_formulir_ddtka"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/formulir_ddtka" />
+
+                    <CheckBox
+                        android:id="@+id/check_formulir_kpsp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/formulir_kpsp" />
+
+                    <CheckBox
+                        android:id="@+id/check_formulir_rekapitulasi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/formulir_rekapitulasi" />
+
+                    <CheckBox
+                        android:id="@+id/check_register_kohort_bayi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/register_kohort_bayi" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linear_pi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorAccent"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/imunisasi"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/check_formulir_laporan_imunisasi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/formulir_laporan" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_pp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorAccent"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/persalinan"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/check_informed_consent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/informed_consent" />
+                    <CheckBox
+                        android:id="@+id/check_kantong_persalinan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/kantong_persalinan" />
+                    <CheckBox
+                        android:id="@+id/check_formulir_laporan_persalinan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/formulir_laporan" />
+                    <CheckBox
+                        android:id="@+id/check_formulir_partograf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/formulir_partograf" />
+                    <CheckBox
+                        android:id="@+id/check_formulir_persalinan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/formulir_persalinan" />
+                    <CheckBox
+                        android:id="@+id/check_formulir_rujukan_persalinan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/formulir_rujukan" />
+                    <CheckBox
+                        android:id="@+id/check_formulir_surat_kelahiran"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/formulir_surat_kelahiran" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_spog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorAccent"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/pog"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/check_peralatan_bidt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/peralatan_bidt" />
+                    <CheckBox
+                        android:id="@+id/check_peralatan_bltasb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/peralatan_bltasb" />
+                    <CheckBox
+                        android:id="@+id/check_peralatan_pr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/peralatan_pr" />
+                    <CheckBox
+                        android:id="@+id/check_peralatan_pl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/peralatan_pl" />
+                    <CheckBox
+                        android:id="@+id/check_peralatan_sd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/peralatan_sd" />
+                    <CheckBox
+                        android:id="@+id/check_peralatan_sd2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/peralatan_sd2" />
+                    <CheckBox
+                        android:id="@+id/check_peralatan_sl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/peralatan_sl" />
+                    <CheckBox
+                        android:id="@+id/check_peralatan_td"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/peralatan_td" />
+                    <CheckBox
+                        android:id="@+id/check_peralatan_td2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/peralatan_td2" />
+                    <CheckBox
+                        android:id="@+id/check_peralatan_tk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/peralatan_tk" />
+                    <CheckBox
+                        android:id="@+id/check_peralatan_d"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/peralatan_d" />
+                    <CheckBox
+                        android:id="@+id/check_peralatan_gb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/peralatan_gb" />
+                    <CheckBox
+                        android:id="@+id/check_peralatan_geb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/peralatan_ge" />
+                    <CheckBox
+                        android:id="@+id/check_peralatan_gv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/peralatan_gv" />
+                    <CheckBox
+                        android:id="@+id/check_peralatan_gtp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/peralatan_gtp" />
+                    <CheckBox
+                        android:id="@+id/check_peralatan_kk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/peralatan_kk" />
+                    <CheckBox
+                        android:id="@+id/check_peralatan_tkk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/peralatan_tkk" />
+                    <CheckBox
+                        android:id="@+id/check_peralatan_lph"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/peralatan_lph" />
+                    <CheckBox
+                        android:id="@+id/check_peralatan_moknd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/peralatan_moknd" />
+                    <CheckBox
+                        android:id="@+id/check_peralatan_mi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/peralatan_mi" />
+                    <CheckBox
+                        android:id="@+id/check_peralatan_nhm"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/peralatan_nhm" />
+
+
+                    <CheckBox
+                        android:id="@+id/check_peralatan_po"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/peralatan_po" />
+                    <CheckBox
+                        android:id="@+id/check_peralatan_pj"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/peralatan_pj" />
+                    <CheckBox
+                        android:id="@+id/check_peralatan_pk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/peralatan_pk" />
+                    <CheckBox
+                        android:id="@+id/check_peralatan_pb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/peralatan_pb" />
+                    <CheckBox
+                        android:id="@+id/check_peralatan_sk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/peralatan_sk" />
+                    <CheckBox
+                        android:id="@+id/check_peralatan_scb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/peralatan_scb" />
+                    <CheckBox
+                        android:id="@+id/check_peralatan_s"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/peralatan_s" />
+                    <CheckBox
+                        android:id="@+id/check_peralatan_si"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/peralatan_si" />
+                    <CheckBox
+                        android:id="@+id/check_peralatan_sd3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/peralatan_sd3" />
+                    <CheckBox
+                        android:id="@+id/check_peralatan_sj"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/peralatan_sj" />
+                    <CheckBox
+                        android:id="@+id/check_peralatan_tor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/peralatan_tor" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linear_spka"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorAccent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/pka"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/check_pemeriksaan_appb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/pemeriksaan_appb" />
+
+                    <CheckBox
+                        android:id="@+id/check_pemeriksaan_lp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/pemeriksaan_lp" />
+
+                    <CheckBox
+                        android:id="@+id/check_pemeriksaan_plk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/pemeriksaan_plk" />
+
+                    <CheckBox
+                        android:id="@+id/check_pemeriksaan_ptba"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/pemeriksaan_ptba" />
+
+                    <CheckBox
+                        android:id="@+id/check_pemeriksaan_tb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/pemeriksaan_tb" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_spkb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorAccent"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/pkb"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/check_pelayanan_blktasb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/pelayanan_blktasb" />
+
+                    <CheckBox
+                        android:id="@+id/check_pelayanan_ik"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/pelayanan_ik" />
+
+                    <CheckBox
+                        android:id="@+id/check_pelayanan_iudk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/pelayanan_iudk" />
+
+                    <CheckBox
+                        android:id="@+id/check_pelayanan_aeakdr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/pelayanan_aeakdr" />
+
+                    <CheckBox
+                        android:id="@+id/check_pelayanan_gmcvd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/pelayanan_gmcvd" />
+
+                    <CheckBox
+                        android:id="@+id/check_pelayanan_kkl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/pelayanan_kkl" />
+
+                    <CheckBox
+                        android:id="@+id/check_pelayanan_kpbakdr"
+                        android:layout_width="match_parent"
+                        android:buttonTint="@color/colorPrimary"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pelayanan_kpbakdr" />
+
+                    <CheckBox
+                        android:id="@+id/check_pelayanan_sus"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/pelayanan_sus" />
+
+                    <CheckBox
+                        android:id="@+id/check_pelayanan_ts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/pelayanan_ts" />
+
+                    <CheckBox
+                        android:id="@+id/check_pelayanan_s"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/pelayanan_s" />
+
+                    <CheckBox
+                        android:id="@+id/check_pelayanan_t"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/pelayanan_t" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_si"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorAccent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/si"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/check_imunisasi_vc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/imunisasi_vc" />
+
+                    <CheckBox
+                        android:id="@+id/check_imunisasi_vr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/imunisasi_vr" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_pn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorAccent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/pn"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/check_nifas_brpn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/nifas_brpn" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_rsb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorAccent"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/rb"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/check_resusitasi_bspp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/resusitasi_bssp" />
+
+                    <CheckBox
+                        android:id="@+id/check_resusitasi_mrp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/resusitasi_mrp" />
+
+                    <CheckBox
+                        android:id="@+id/check_resusitasi_pld"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/resusitasi_pld" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linear_pb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorAccent"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/pb"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/check_lain_b"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/lain_b" />
+
+                    <CheckBox
+                        android:id="@+id/check_lain_cp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/lain_cp" />
+
+                    <CheckBox
+                        android:id="@+id/check_lain_kg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/lain_kg" />
+
+                    <CheckBox
+                        android:id="@+id/check_lain_sb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/lain_sb2" />
+
+                    <CheckBox
+                        android:id="@+id/check_lain_pr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/lain_pr" />
+
+                    <CheckBox
+                        android:id="@+id/check_lain_db"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/lain_db" />
+
+                    <CheckBox
+                        android:id="@+id/check_lain_k"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/lain_k" />
+
+                    <CheckBox
+                        android:id="@+id/check_lain_la"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/lain_la" />
+
+                    <CheckBox
+                        android:id="@+id/check_lain_lo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/lain_lo" />
+
+                    <CheckBox
+                        android:id="@+id/check_lain_m"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/lain_m" />
+
+                    <CheckBox
+                        android:id="@+id/check_lain_p"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/lain_p" />
+
+                    <CheckBox
+                        android:id="@+id/check_lain_p2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/lain_p2" />
+
+                    <CheckBox
+                        android:id="@+id/check_lain_ppl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/lain_ppl" />
+
+                    <CheckBox
+                        android:id="@+id/check_lain_s"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/lain_s" />
+
+                    <CheckBox
+                        android:id="@+id/check_lain_stka"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/lain_stka" />
+
+                    <CheckBox
+                        android:id="@+id/check_lain_sump"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/lain_sump" />
+
+                    <CheckBox
+                        android:id="@+id/check_lain_tstyddipp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/lain_tstyddipp" />
+
+                    <CheckBox
+                        android:id="@+id/check_lain_t"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/lain_t" />
+
+                    <CheckBox
+                        android:id="@+id/check_lain_tk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/lain_tk" />
+                    <CheckBox
+                        android:id="@+id/check_lain_tk2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/lain_tk2" />
+
+                    <CheckBox
+                        android:id="@+id/check_lain_wk"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/lain_wk" />
+
+                    <CheckBox
+                        android:id="@+id/check_lain_b2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/lain_b2" />
+
+                    <CheckBox
+                        android:id="@+id/check_lain_ptb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/lain_ptb" />
+
+
+                    <CheckBox
+                        android:id="@+id/check_lain_pp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/lain_pp" />
+
+                    <CheckBox
+                        android:id="@+id/check_lain_hpn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/lain_hpn" />
+
+                    <CheckBox
+                        android:id="@+id/check_lain_kmksun"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/lain_kmksun" />
+
+
+                    <CheckBox
+                        android:id="@+id/check_lain_lkp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/lain_lkp" />
+
+                    <CheckBox
+                        android:id="@+id/check_lain_sb2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/lain_sb" />
+
+                    <CheckBox
+                        android:id="@+id/check_lain_sd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/lain_sd" />
+
+                    <CheckBox
+                        android:id="@+id/check_lain_s2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/lain_s2" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_obh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorAccent"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/joyhadpmb"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/check_harus_oi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/harus_oi" />
+                    <CheckBox
+                        android:id="@+id/check_harus_mi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/harus_mi" />
+                    <CheckBox
+                        android:id="@+id/check_harus_msi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/harus_msi" />
+                    <CheckBox
+                        android:id="@+id/check_harus_kgi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/harus_kgi" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_obs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorAccent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/joybadpmb"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/check_bisa_vadt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bisa_vadt" />
+                    <CheckBox
+                        android:id="@+id/check_bisa_ttd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bisa_ttd" />
+                    <CheckBox
+                        android:id="@+id/check_bisa_vki"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bisa_vki" />
+                    <CheckBox
+                        android:id="@+id/check_bisa_smg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/harus_smg" />
+
+                    <CheckBox
+                        android:id="@+id/check_bisa_dt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bisa_dt" />
+                    <CheckBox
+                        android:id="@+id/check_bisa_kdet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bisa_kdet" />
+                    <CheckBox
+                        android:id="@+id/check_bisa_klet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bisa_klet" />
+                    <CheckBox
+                        android:id="@+id/check_bisa_lt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/harus_lt" />
+                    <CheckBox
+                        android:id="@+id/check_bisa_kcaet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bisa_kcaet" />
+                    <CheckBox
+                        android:id="@+id/check_bisa_kget"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bisa_kget" />
+                    <CheckBox
+                        android:id="@+id/check_bisa_lt2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bisa_lt" />
+                    <CheckBox
+                        android:id="@+id/check_bisa_kdet2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/harus_kdet" />
+
+
+
+                    <CheckBox
+                        android:id="@+id/check_bisa_kelt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bisa_kelt" />
+                    <CheckBox
+                        android:id="@+id/check_bisa_mav"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/harus_mav" />
+                    <CheckBox
+                        android:id="@+id/check_bisa_kmaecv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bisa_kmaecv" />
+                    <CheckBox
+                        android:id="@+id/check_bisa_lr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bisa_lr" />
+                    <CheckBox
+                        android:id="@+id/check_bisa_er"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bisa_er" />
+                    <CheckBox
+                        android:id="@+id/check_bisa_iudcta"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/harus_iudcta" />
+                    <CheckBox
+                        android:id="@+id/check_bisa_iudl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/harus_iudl" />
+                    <CheckBox
+                        android:id="@+id/check_bisa_k"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bisa_k" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_bmhp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorAccent"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/bmhp"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/check_bmhp_a"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bmhp_a" />
+                    <CheckBox
+                        android:id="@+id/check_bmhp_cd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bmhp_cd" />
+                    <CheckBox
+                        android:id="@+id/check_bmhp_ks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bmhp_ks" />
+                    <CheckBox
+                        android:id="@+id/check_bmhp_k"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bmhp_k" />
+
+                    <CheckBox
+                        android:id="@+id/check_bmhp_kns"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bmhp_kns" />
+                    <CheckBox
+                        android:id="@+id/check_bmhp_ks2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bmhp_ks2" />
+                    <CheckBox
+                        android:id="@+id/check_bmhp_lks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bmhp_lks" />
+                    <CheckBox
+                        android:id="@+id/check_bmhp_m"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bmhp_m" />
+                    <CheckBox
+                        android:id="@+id/check_bmhp_pt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bmhp_pt" />
+                    <CheckBox
+                        android:id="@+id/check_bmhp_sta"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bisa_sta" />
+                    <CheckBox
+                        android:id="@+id/check_bmhp_bcc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bmhp_bcc" />
+                    <CheckBox
+                        android:id="@+id/check_bmhp_gb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bmhp_gb" />
+
+                    <CheckBox
+                        android:id="@+id/check_bmhp_isd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bmhp_isd" />
+                    <CheckBox
+                        android:id="@+id/check_bmhp_iswn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bmhp_iswn" />
+                    <CheckBox
+                        android:id="@+id/check_bmhp_jj"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bmhp_jj" />
+                    <CheckBox
+                        android:id="@+id/check_bmhp_ku"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bmhp_ku" />
+                    <CheckBox
+                        android:id="@+id/check_bmhp_kfd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bmhp_kfd" />
+                    <CheckBox
+                        android:id="@+id/check_bmhp_kn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bmhp_kn" />
+                    <CheckBox
+                        android:id="@+id/check_bmhp_p"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bmhp_p" />
+                    <CheckBox
+                        android:id="@+id/check_bmhp_ptp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bmhp_ptp" />
+
+
+                    <CheckBox
+                        android:id="@+id/check_bmhp_p2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bmhp_p2" />
+                    <CheckBox
+                        android:id="@+id/check_bmhp_scuct"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bmhp_scuct" />
+                    <CheckBox
+                        android:id="@+id/check_bmhp_st"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bmhp_st" />
+                    <CheckBox
+                        android:id="@+id/check_bmhp_st2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/bmhp_st2" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linear_spo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorAccent"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/spo"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/check_spo_pa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/spo_pa" />
+                    <CheckBox
+                        android:id="@+id/check_spo_pp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/spo_pp" />
+                    <CheckBox
+                        android:id="@+id/check_spo_pn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/spo_pn" />
+                    <CheckBox
+                        android:id="@+id/check_spo_pbbl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/spo_pbbl" />
+
+
+
+                    <CheckBox
+                        android:id="@+id/check_spo_plkb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/spo_plkb" />
+                    <CheckBox
+                        android:id="@+id/check_spo_pppe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/spo_pppe" />
+                    <CheckBox
+                        android:id="@+id/check_spo_pr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/spo_pr" />
+                    <CheckBox
+                        android:id="@+id/check_spo_hap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/spo_hap" />
+
+                    <CheckBox
+                        android:id="@+id/check_spo_hpp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/spo_hpp" />
+
+                    <CheckBox
+                        android:id="@+id/check_spo_pba"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/spo_pba" />
+                    <CheckBox
+                        android:id="@+id/check_spo_ms"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/spo_ms" />
+                    <CheckBox
+                        android:id="@+id/check_spo_ppi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorPrimary"
+                        android:text="@string/spo_ppi" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_lanjut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:background="@color/colorPrimary"
+        android:text="@string/lanjut"/>
+    <Button
+        android:id="@+id/btn_proses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:visibility="invisible"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:background="@color/colorPrimary"
+        android:text="@string/proses"/>
+
+</RelativeLayout>
