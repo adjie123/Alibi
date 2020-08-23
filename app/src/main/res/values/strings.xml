@@ -235,4 +235,6 @@
     <string name="nifas_brpn">Buku Register Pelayanan Nifas</string>
     <string name="lain_sb2">Sepatu boot</string>
     <string name="bukan_rumah">Bukan Rumah</string>
+    <string name="openpdf">Buka PDF</string>
+
 </resources>

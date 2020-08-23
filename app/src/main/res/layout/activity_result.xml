@@ -31,7 +31,6 @@
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:text="@string/persentase"
-                android:gravity="end"
                 android:layout_weight="1"/>
 
         </LinearLayout>
@@ -478,6 +477,16 @@
                 android:textAllCaps="false"
                 android:textColor="@android:color/white"
                 android:text="@string/buat_pdf"/>
+            <Button
+                android:id="@+id/btn_open"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                android:background="@color/colorPrimary"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:text="@string/openpdf"/>
             <Button
                 android:id="@+id/btn_detail"
                 android:layout_width="0dp"
